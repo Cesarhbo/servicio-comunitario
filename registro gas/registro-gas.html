@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Cilindros - Josefa Camejo Este</title>
+    <link rel="stylesheet" href="estilo-gas.css">
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Cilindros - Josefa Camejo Este</title>
+    <link rel="stylesheet" href="estilo-gas.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Registro de Jornadas de Cilindros</h2>
+    
+    <div class="header-info">
+        Comunidad: Josefa Camejo Este. <br>
+        Responsable: Maritza Morillo
+    </div>
+
+    <div class="form-group">
+        <input type="text" id="nombre" placeholder="Nombre y Apellido">
+        <input type="number" id="c10" placeholder="Cil. 10kg">
+        <input type="number" id="c18" placeholder="Cil. 18kg">
+        <input type="number" id="c43" placeholder="Cil. 43kg">
+        <button onclick="agregarFila()">AÑADIR A LA LISTA</button>
+    </div>
+
+    <hr>
+
+    <div class="tabla-contenedor" id="formato-impresion">
+        <h3 style="text-align: center;">CONSOLIDADO DE JORNADAS DE CILINDROS</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>NOMBRE APELLIDO</th>
+                    <th>CILINDROS DE 10KG</th>
+                    <th>CILINDROS DE 18KG</th>
+                    <th>CILINDROS DE 43KG</th>
+                    <th>TOTAL</th>
+                </tr>
+            </thead>
+            <tbody id="cuerpo-tabla">
+                </tbody>
+            <tfoot>
+                <tr class="total-row">
+                    <td>TOTALES</td>
+                    <td id="t10">0</td>
+                    <td id="t18">0</td>
+                    <td id="t43">0</td>
+                    <td id="tGeneral">0</td>
+                </tr>
+            </tfoot>
+        </table>
+        <div class="resumen-montos" style="margin-top:12px;">
+            <h4>Montos a Pagar (Bs)</h4>
+            <div>10kg: <span id="m10">Bs 0.00</span></div>
+            <div>18kg: <span id="m18">Bs 0.00</span></div>
+            <div>43kg: <span id="m43">Bs 0.00</span></div>
+            <div><strong>Total General: <span id="mGeneral">Bs 0.00</span></strong></div>
+        </div>
+    </div>
+    
+    <br>
+    <div class="barra-acciones">
+        <button onclick="window.location.href='../ultimos-registros/ver-registros.html'">Ver Registros</button>
+        <button onclick="borrarTodo()">Borrar Todo</button>
+        <button onclick="generarPDF()">Guardar como PDF</button>
+        <button onclick="window.location.href='../pagina-principal/principal.html'">Regresar al Inicio</button>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="Gas.js"></script>
+
+</body>
+</html>

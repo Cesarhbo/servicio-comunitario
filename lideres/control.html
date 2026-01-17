@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo-lideres.css">
+</head>
+<body>
+    
+    <section class="card">
+        <h2>👥 Gestión de Líderes de Calle</h2>
+
+        <div class="resumen-grid">
+            <div class="resumen-item">
+                <div class="resumen-title">Líderes Al Día</div>
+                <div class="resumen-value" id="countAlDia">0</div>
+                <div class="resumen-sub">Habitantes: <span id="habAlDia">0</span></div>
+            </div>
+            <div class="resumen-item">
+                <div class="resumen-title">Pendientes</div>
+                <div class="resumen-value" id="countPendiente">0</div>
+                <div class="resumen-sub">Habitantes: <span id="habPendiente">0</span></div>
+            </div>
+            <div class="resumen-item">
+                <div class="resumen-title">En Censo</div>
+                <div class="resumen-value" id="countCenso">0</div>
+                <div class="resumen-sub">Habitantes: <span id="habCenso">0</span></div>
+            </div>
+            <div class="resumen-item total">
+                <div class="resumen-title">Total Habitantes</div>
+                <div class="resumen-value" id="totalHab">0</div>
+            </div>
+        </div>
+
+        <form id="formLider" class="grid-inputs">
+            <input type="text" id="nombreLider" placeholder="Nombre Completo" required>
+            <input type="text" id="cedulaLider" placeholder="Cédula / ID" required>
+            <input type="text" id="calleLider" placeholder="Calle que atiende" required>
+            <input type="number" id="habitantesLider" placeholder="Cant. Habitantes" min="1" required>
+            <select id="estatusCalle">
+                <option value="Al día">Al día</option>
+                <option value="Pendiente">Pendiente</option>
+                <option value="En Censo">En Censo</option>
+            </select>
+            <button type="submit" class="btn-registrar">Registrar Líder</button>
+            <button type="button" id="btnCancelEdit" class="btn-cancel" style="display:none;">Cancelar</button>
+        </form>
+
+        <div class="table-wrap">
+            <table class="tabla-lideres">
+                <thead>
+                    <tr>
+                        <th>Líder</th>
+                        <th>Cédula</th>
+                        <th>Calle</th>
+                        <th>Habitantes</th>
+                        <th>Estatus</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaLideres"></tbody>
+            </table>
+        </div>
+        <div style="text-align:center; margin-top:12px;">
+            <button onclick="window.location.href='../pagina-principal/principal.html'" style="background:#3498db; color:#fff; padding:8px 12px; border:none; border-radius:6px; cursor:pointer;">🔙 Volver al Menú Principal</button>
+        </div>
+
+        <script src="lideres.js"></script>
+    </section>
+</body>
+</html>

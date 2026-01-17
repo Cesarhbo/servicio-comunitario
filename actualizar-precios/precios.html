@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Gas - Precios y Registros</title>
+    <link rel="stylesheet" href="estilo-precio.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Control de Cilindros</h1>
+
+        <section class="card">
+            <h2>💰 Actualizar Precios Base</h2>
+            <div class="grid-inputs">
+                <div>
+                    <label>Tamaño Cilindro (kg)</label>
+                    <select id="tipoGas">
+                        <option value="10">10 kg</option>
+                        <option value="18">18 kg</option>
+                        <option value="43">43 kg</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Nuevo Precio (Bs)</label>
+                    <input type="number" id="nuevoPrecio" placeholder="Ej: 15000.00">
+                </div>
+                <button onclick="actualizarPrecio()">Actualizar Precio</button>
+            </div>
+            
+            <div id="listaPrecios" class="precios-visor">
+                </div>
+            <div class="historial-card">
+                <h3>Historial de Actualizaciones de Precio</h3>
+                <div id="historialPrecios" class="historial-visor"></div>
+                <div style="text-align:center; margin-top:10px;">
+                    <button onclick="window.location.href='../pagina-principal/principal.html'" style="background:#3498db;">🔙 Volver al Menú Principal</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de registro y historial removida: el registro de cilindros y pagos
+             ahora se maneja en la sección 'registro gas'. Esta página solo actualiza precios en Bs. -->
+    </div>
+    <script src="actualizar.js"></script>
+</body>
+</html>

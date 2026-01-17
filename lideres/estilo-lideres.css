@@ -1,0 +1,50 @@
+/* Añadir al final de tu archivo CSS */
+.btn-eliminar {
+    background-color: #e74c3c;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.status-tag {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.85em;
+    font-weight: bold;
+}
+
+.status-al-dia { background-color: #d4edda; color: #155724; }
+.status-pendiente { background-color: #f8d7da; color: #721c24; }
+
+/* Layout general */
+body { font-family: Arial, Helvetica, sans-serif; background: #f6f8fa; color: #222; padding: 18px; }
+.card { background: white; padding: 18px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); max-width: 1000px; margin: 0 auto; }
+.resumen-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 12px; }
+.resumen-item { background: #f7f9fb; padding: 10px; border-radius: 8px; text-align: center; }
+.resumen-item.total { background: linear-gradient(90deg,#ffe6a7,#ffd27a); }
+.resumen-title { font-size: 0.9rem; color: #555; }
+.resumen-value { font-size: 1.6rem; font-weight: 700; margin-top: 6px; }
+.resumen-sub { font-size: 0.85rem; color: #666; margin-top: 6px; }
+
+.grid-inputs { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; align-items: center; margin-top: 10px; }
+.grid-inputs input, .grid-inputs select { padding: 8px; border-radius: 6px; border: 1px solid #dcdcdc; }
+.btn-registrar { background:#3498db; color:white; padding:10px 12px; border:none; border-radius:6px; cursor:pointer; }
+
+.table-wrap { overflow-x:auto; margin-top:16px; }
+.tabla-lideres { width:100%; border-collapse: collapse; }
+.tabla-lideres th, .tabla-lideres td { padding:8px 10px; border-bottom:1px solid #eee; text-align:left; }
+.tabla-lideres th { background:#fafafa; color:#333; font-weight:600; }
+
+.btn-eliminar { background-color: #e74c3c; color: white; padding: 6px 10px; font-size: 13px; border: none; border-radius: 6px; cursor: pointer; }
+.status-tag { display:inline-block; padding:6px 10px; border-radius: 12px; font-weight:600; }
+.status-al-dia { background:#e6ffed; color:#0a6b2e; }
+.status-pendiente { background:#fff0f0; color:#a10f2f; }
+.status-en-censo { background:#fff7e6; color:#7a4e00; }
+
+.btn-edit { background:#f1c40f; color:#3d2e00; padding:6px 10px; border:none; border-radius:6px; cursor:pointer; margin-right:6px; }
+.btn-cancel { background:#95a5a6; color:#fff; padding:8px 10px; border:none; border-radius:6px; cursor:pointer; }
+
+@media (max-width:800px) {
+    .resumen-grid { grid-template-columns: repeat(2, 1fr); }
+    .grid-inputs { grid-template-columns: 1fr; }
+}

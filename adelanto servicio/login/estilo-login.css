@@ -1,0 +1,61 @@
+:root{
+    --bg-start: #0f172a; /* deep navy */
+    --bg-end: #0b486b;   /* teal */
+    --card-bg: rgba(255,255,255,0.96);
+    --accent: #007bff;
+}
+
+*{box-sizing:border-box}
+body{
+    font-family: Inter, Arial, sans-serif;
+    margin:0;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    /* Fondo basado en imagen: coloca la imagen de la bandera en ../assets/venezuela-flag.jpg
+         Si no quieres imagen, se usará el degradado de respaldo definido en background-color. */
+    /* Usar la imagen local 'descarga (2).jpeg' ubicada en esta misma carpeta */
+    background-image: url('descarga (2).jpeg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: var(--bg-start);
+    color:#fff;
+}
+
+/* Optional background image: to use an image, uncomment the next block and provide a valid path */
+/*
+body::before{
+    content:'';
+    position:fixed; inset:0;
+    background-image:url('ruta-de-tu-fondo.jpg');
+    background-size:cover;
+    background-position:center;
+    opacity:0.12;
+    z-index:0;
+}
+*/
+
+.login-container{
+    position:relative;
+    z-index:1;
+    width:360px;
+    background: rgba(0,0,0,0.60); /* fondo oscuro semitransparente para contraste */
+    padding:28px;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.6);
+    color:#ffffff;
+}
+
+.login-container h2{margin:0 0 14px; text-align:center; color:#07203a}
+.input-group{margin-bottom:12px}
+label{display:block;margin-bottom:6px;color:#445}
+input{width:100%;padding:10px;border:1px solid rgba(255,255,255,0.15);border-radius:8px;background:rgba(255,255,255,0.92);color:#0b2940}
+button{width:100%;padding:10px;border-radius:8px;border:none;background:var(--accent);color:#fff;font-weight:600}
+button:hover{opacity:0.95}
+
+@media(max-width:420px){.login-container{width:92%;padding:18px}}
+
+/* Overlay para mejorar contraste sobre la imagen */
+body::after{content:'';position:fixed;inset:0;background:rgba(0,0,0,0.28);pointer-events:none;z-index:0}

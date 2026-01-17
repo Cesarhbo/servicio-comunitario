@@ -1,0 +1,28 @@
+:root{--primary: #0b486b; --secondary:#2b7a9b; --card:#ffffffee}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family: Inter, Arial, sans-serif;
+  color:#fff;
+  /* Fondo temático para la pantalla de inicio (imagen del proyecto) */
+  background-image: url('../pagina-principal/d52fb331b6ccb40b228c2d3f2bf58c87.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  /* Respaldo en degradado si la imagen no carga */
+  background-color: linear-gradient(180deg, #0f1b2a 0%, #0b486b 60%);
+}
+
+/* Overlay para mejorar contraste en la pantalla de inicio */
+body::after{content:'';position:fixed;inset:0;background:rgba(2,6,23,0.36);pointer-events:none;z-index:0}
+
+.login-container{background: rgba(0,0,0,0.58); padding:28px; border-radius:12px; text-align:center; width:min(920px,94%); backdrop-filter: blur(6px); color:#fff}
+.titulo{font-size:42px;margin:0 0 6px;font-weight:800;color:#fff}
+.subtitulo{font-size:18px;margin:0 0 16px;color:#f0f6fb}
+.boton{background:linear-gradient(90deg,var(--primary),var(--secondary));padding:12px 20px;border:none;border-radius:10px;color:white;font-weight:800;cursor:pointer;box-shadow:0 8px 20px rgba(11,72,107,0.25)}
+.boton:hover{transform:translateY(-2px);transition:all .18s ease}
+
+@media(max-width:600px){.titulo{font-size:28px}.subtitulo{font-size:14px}}

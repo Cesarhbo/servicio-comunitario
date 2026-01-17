@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reporte de Consolidado - Gas</title>
+    <link rel="stylesheet" href="./estilo-ultimo.css">
+</head>
+<body>
+
+    <div class="acciones">
+        <button class="btn btn-print" onclick="generarPDF()">Guardar como PDF</button>
+        <button class="btn" onclick="location.reload()" style="background:#6c757d; color:white;">Actualizar</button>
+        <button class="btn" onclick="history.back()" style="background:#28a745; color:white;">Volver</button>
+        <button class="btn" onclick="borrarTodosRegistros()" style="background:#dc3545; color:white;">Eliminar Registros</button>
+    </div>
+
+    <div class="header-reporte">
+        <h1 id="titulo-reporte">CONSOLIDADO DE JORNADAS DE CILINDROS</h1>
+        <p>Comunidad: <strong>Josefa Camejo Este</strong> | Responsable: <strong>Maritza Morillo</strong></p>
+    </div>
+
+    <div id="mensaje-vacio" class="no-datos">
+        <h2>⚠️ No hay registros disponibles actualmente</h2>
+        <p>Por favor, ingrese datos en el formulario de la pestaña principal.</p>
+    </div>
+
+    <table id="tabla-reporte">
+        <thead>
+            <tr>
+                <th>NOMBRE Y APELLIDO</th>
+                <th>CIL. 10KG</th>
+                <th>CIL. 18KG</th>
+                <th>CIL. 43KG</th>
+                <th>TOTAL</th>
+            </tr>
+        </thead>
+        <tbody id="cuerpo-reporte"></tbody>
+        <tfoot>
+            <tr class="total-row">
+                <td>TOTALES GENERALES</td>
+                <td id="rt10">0</td>
+                <td id="rt18">0</td>
+                <td id="rt43">0</td>
+                <td id="rtGeneral">0</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="./ultimos.js"></script>
+</body>
+</html>
